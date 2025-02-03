@@ -1,0 +1,130 @@
+/* Reset básico */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: auto;
+}
+
+/* Fundo desfocado */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/images/kizRTpeXsWOB.webp') no-repeat center center;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  filter: blur(4px);
+  z-index: -1;
+}
+
+/* Conteúdo principal */
+.content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 1;
+}
+
+/* Popup */
+.popup {
+  background-color: rgba(255, 255, 255, 1.0);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 0px 20px 20px 20px;
+  width: calc(100% - 40px);
+  max-width: 400px;
+  text-align: left;
+  animation: fadeIn 0.5s ease-in-out;
+  margin: 70px auto;
+  box-sizing: border-box;
+}
+
+/* Título */
+.popup h3 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 15px;
+}
+.popup p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Botões */
+.button-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px; /* Espaçamento entre os botões */
+  margin-top: 20px;
+}
+
+.button-link {
+  padding: 12px 24px;
+  font-size: 20px;
+  background-color: #121212;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+  padding: 10px 0;
+  background-color: rgba(1, 1, 1, 0.9);
+  background-blend-mode: darken;
+  filter: blur(3px);
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer p {
+  margin-top: 10px;
+}
+
+/* Animação fadeIn */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Imagem de fundo para telas menores */
+@media (max-width: 768px) {
+  .background {
+    background: url('/images/LzyI5otf6igB.webp') no-repeat center center;
+    background-size: cover;
+    filter: blur(3px);
+  }
+}
